@@ -55,6 +55,22 @@ public class InputForm {
 		this.senderName = senderName;
 	}
 
+	public String getSenderKanaName() {
+		return senderKanaName;
+	}
+
+	public void setSenderKanaName(String senderKanaName) {
+		this.senderKanaName = senderKanaName;
+	}
+
+	public String getSenderBirth() {
+		return senderBirth;
+	}
+
+	public void setSenderBirth(String senderBirth) {
+		this.senderBirth = senderBirth;
+	}
+
 	public String getSenderPostCord() {
 		return senderPostCord;
 	}
@@ -85,6 +101,14 @@ public class InputForm {
 
 	public void setReceiverName(String receiverName) {
 		this.receiverName = receiverName;
+	}
+
+	public String getReceiverKanaName() {
+		return receiverKanaName;
+	}
+
+	public void setReceiverKanaName(String receiverKanaName) {
+		this.receiverKanaName = receiverKanaName;
 	}
 
 	public String getReceiverPostCord() {
@@ -118,6 +142,7 @@ public class InputForm {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+
 	
 }
 

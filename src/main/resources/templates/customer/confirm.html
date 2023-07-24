@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-<p>ここは入力情報確認のためのページです</p>
+<p>ここは入力情報確認のためのページですa</p>
 <div th:text=${inputForm.senderName}>
 </div>
+
+<form method="post" th:action="@{/customer/deliveryr-request-execute}" th:object="${inputForm}">
+	<button type="submit">登録</button>
+</form>
+
+<a th:href="@{deliveryr-request-execute}"><button>登録</button></a>
+
 </body>
 </html>

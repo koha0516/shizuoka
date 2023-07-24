@@ -9,22 +9,29 @@
 	
 	<!-- th:action="@{実行するメソッドが紐づいているURLを記述する}" -->
 	<!-- th:object="${インスタンス名} と記述し、formの中でentryFormインスタンスを受け取る" -->
-    <form th:action="@{request-confirm}" th:object="${inputForm}" method="post">
+    <form th:action="@{/customer/request-confirm}" th:object="${inputForm}" method="post">
     	<h3>集荷情報登録</h3>
     	<!-- エラーがあったらエラー内容を表示 -->
         <div th:errors="*{senderName}"></div>
         <!-- th:field*{フィールド名} と記述し、受け取ったオブジェクトの指定したフィールドに紐づける -->
         <input type="text" name="senderName" placeholder="名前" th:field="*{senderName}"><br>
+        
         <div th:errors="*{senderKanaName}"></div>
         <input type="text" name="senderKanaName" placeholder="フリガナ" th:field="*{senderKanaName}"><br>
+        
         <div th:errors="*{senderBirth}"></div>
         <input type="date" name="senderBirth" placeholder="集荷希望日時" th:field="*{senderBirth}"><br>
+        
         <div th:errors="*{senderPostCord}"></div>
         <input type="text" name="senderPostCord" placeholder="郵便番号" th:field="*{senderPostCord}"><br>
+        
         <div th:errors="*{senderAddress}"></div>
         <input type="text" name="senderAddress" placeholder="住所" th:field="*{senderAddress}"><br>
+        
+        
         <div th:errors="*{pickUpAt}"></div>
         <input type="date" name="pickUpAt" placeholder="集荷希望日時" th:field="*{pickUpAt}"><br>
+        
         <h3>配達情報登録</h3>
         <div th:errors="*{receiverName}"></div>
         <input type="text" name="receiverName" placeholder="名前" th:field="*{receiverName}"><br>
