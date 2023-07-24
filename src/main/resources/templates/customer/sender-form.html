@@ -22,12 +22,11 @@
         <div th:errors="*{senderBirth}"></div>
         <input type="date" name="senderBirth" placeholder="集荷希望日時" th:field="*{senderBirth}"><br>
         
-        <div th:errors="*{senderPostCord}"></div>
-        <input type="text" name="senderPostCord" placeholder="郵便番号" th:field="*{senderPostCord}"><br>
+        <div th:errors="*{senderPostCode}"></div>
+        <input type="text" name="senderPostCode" placeholder="郵便番号" th:field="*{senderPostCode}"><br>
         
         <div th:errors="*{senderAddress}"></div>
         <input type="text" name="senderAddress" placeholder="住所" th:field="*{senderAddress}"><br>
-        
         
         <div th:errors="*{pickUpAt}"></div>
         <input type="date" name="pickUpAt" placeholder="集荷希望日時" th:field="*{pickUpAt}"><br>
@@ -35,14 +34,19 @@
         <h3>配達情報登録</h3>
         <div th:errors="*{receiverName}"></div>
         <input type="text" name="receiverName" placeholder="名前" th:field="*{receiverName}"><br>
-        <div th:errors="*{receiverPostCord}"></div>
-        <div th:errors="*{receiverKanaName}"></div>
+        
+        <div th:errors="*{receiverPostCode}"></div>
         <input type="text" name="receiverKanaName" placeholder="フリガナ" th:field="*{receiverKanaName}"><br>
-        <input type="text" name="receiverPostCord" placeholder="郵便番号" th:field="*{receiverPostCord}"><br>
+        
+        <div th:errors="*{receiverKanaName}"></div>
+        <input type="text" name="receiverPostCode" placeholder="郵便番号" th:field="*{receiverPostCode}"><br>
+        
         <div th:errors="*{receiverAddress}"></div>
         <input type="text" name="receiverAddress" placeholder="住所" th:field="*{receiverAddress}"><br>
+        
         <div th:errors="*{arriveAt}"></div>
         <input type="date" name="arriveAt" placeholder="集荷希望日時" th:field="*{arriveAt}"><br>
+        
         <h3>荷姿情報登録</h3>
         <div th:errors="*{quantity}"></div>
         <input type="number" name="quantity" th:field="*{quantity}"><br>

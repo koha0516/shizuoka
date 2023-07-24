@@ -84,18 +84,18 @@ CREATE TABLE delivery_info(
     sender_name             varchar(32) NOT NULL,
     sender_kana_name        varchar(64) NOT NULL,
     sender_birth            date NOT NULL,
-    sender_post_cord        varchar(8) NOT NULL,
+    sender_post_code        varchar(8) NOT NULL,
     sender_address          varchar(64) NOT NULL,
-    pickup_at               timestamp NOT NULL,
+    pick_up_at              timestamp NOT NULL,
     receiver_name           varchar(32) NOT NULL,
     receiver_kana_name      varchar(64) NOT NULL,
-    receiver_post_cord      varchar(8) NOT NULL,
+    receiver_post_code		varchar(8) NOT NULL,
     receiver_address        varchar(64) NOT NULL,
-    delivery_at				timestamp NOT NULL,
+    arrive_at				timestamp NOT NULL,
     quantity                int NOT NULL,
     PRIMARY KEY (id),
-    FOREIGN KEY (sender_post_cord) REFERENCES post_cord(post_cord),
-    FOREIGN KEY (receiver_post_cord) REFERENCES post_cord(post_cord)
+    -- FOREIGN KEY (sender_post_code) REFERENCES post_cord(post_cord)
+    -- FOREIGN KEY (receiver_post_code) REFERENCES post_cord(post_cord)
 );
 
 

@@ -10,11 +10,11 @@ import com.example.demo.entity.DeliveryInfo;
 @Mapper
 public interface DeliveryInfoMapper {
 	@Insert("INSERT into delivery_info(sender_name, sender_kana_name, sender_birth, "
-			+ "sender_post_code, sender_address, pickup_at, receiver_name, receiver_kana_name, "
-			+ "receiver_post_code, receiver_address, delivery_at, quantity) "
+			+ "sender_post_code, sender_address, pick_up_at, receiver_name, receiver_kana_name, "
+			+ "receiver_post_code, receiver_address, arrive_at, quantity) "
 			+ "values(#{senderName}, #{senderKanaName}, #{senderBirth},"
-			+ "#{senderPostCode}, #{senderAddress}, #{pickupAt}, #{receiverName}, #{receiverKanaName},"
-			+ "#{receiverPostCode}, #{receiverAddress}, #{deliveryAt}, #{quantity})")
+			+ "#{senderPostCode}, #{senderAddress}, #{pickUpAt}, #{receiverName}, #{receiverKanaName},"
+			+ "#{receiverPostCode}, #{receiverAddress}, #{arriveAt}, #{quantity})")
 	@Options(useGeneratedKeys = true , keyColumn = "id", keyProperty = "id")
 	void insertDelilveryInfo(DeliveryInfo delilveryInfo);
 

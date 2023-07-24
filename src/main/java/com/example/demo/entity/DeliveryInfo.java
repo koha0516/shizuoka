@@ -9,12 +9,12 @@ public class DeliveryInfo {
 	private String senderName;
 	private String senderKanaName;
     private String senderBirth;
-    private String senderPostCord;
+    private String senderPostCode;
     private String senderAddress;          
     private String pickUpAt;
 	private String receiverName;
 	private String receiverKanaName;
-    private String receiverPostCord;
+    private String receiverPostCode;
     private String receiverAddress;
     private String arriveAt;
 	private int quantity;
@@ -42,11 +42,12 @@ public class DeliveryInfo {
 	public void setSenderBirth(String senderBirth) {
 		this.senderBirth = senderBirth;
 	}
-	public String getSenderPostCord() {
-		return senderPostCord;
+	
+	public String getSenderPostCode() {
+		return senderPostCode;
 	}
-	public void setSenderPostCord(String senderPostCord) {
-		this.senderPostCord = senderPostCord;
+	public void setSenderPostCode(String senderPostCode) {
+		this.senderPostCode = senderPostCode;
 	}
 	public String getSenderAddress() {
 		return senderAddress;
@@ -72,11 +73,11 @@ public class DeliveryInfo {
 	public void setReceiverKanaName(String receiverKanaName) {
 		this.receiverKanaName = receiverKanaName;
 	}
-	public String getReceiverPostCord() {
-		return receiverPostCord;
+	public String getReceiverPostCode() {
+		return receiverPostCode;
 	}
-	public void setReceiverPostCord(String receiverPostCord) {
-		this.receiverPostCord = receiverPostCord;
+	public void setReceiverPostCode(String receiverPostCode) {
+		this.receiverPostCode = receiverPostCode;
 	}
 	public String getReceiverAddress() {
 		return receiverAddress;

@@ -19,7 +19,7 @@ public class InputForm {
     private String senderBirth;
 	
 	@NotNull
-    private String senderPostCord;
+    private String senderPostCode;
     
 	@NotNull
     private String senderAddress;          
@@ -36,7 +36,7 @@ public class InputForm {
 	private String receiverKanaName;
 	
 	@NotNull
-    private String receiverPostCord;
+    private String receiverPostCode;
     
 	@NotNull
     private String receiverAddress;
@@ -71,12 +71,12 @@ public class InputForm {
 		this.senderBirth = senderBirth;
 	}
 
-	public String getSenderPostCord() {
-		return senderPostCord;
+	public String getSenderPostCode() {
+		return senderPostCode;
 	}
 
-	public void setSenderPostCord(String senderPostCord) {
-		this.senderPostCord = senderPostCord;
+	public void setSenderPostCode(String senderPostCode) {
+		this.senderPostCode = senderPostCode;
 	}
 
 	public String getSenderAddress() {
@@ -111,12 +111,12 @@ public class InputForm {
 		this.receiverKanaName = receiverKanaName;
 	}
 
-	public String getReceiverPostCord() {
-		return receiverPostCord;
+	public String getReceiverPostCode() {
+		return receiverPostCode;
 	}
 
-	public void setReceiverPostCord(String receiverPostCord) {
-		this.receiverPostCord = receiverPostCord;
+	public void setReceiverPostCode(String receiverPostCode) {
+		this.receiverPostCode = receiverPostCode;
 	}
 
 	public String getReceiverAddress() {
