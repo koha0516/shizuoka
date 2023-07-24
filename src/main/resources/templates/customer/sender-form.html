@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>集荷情報登録</h3>
+	
+	<!-- th:action="@{実行するメソッドが紐づいているURLを記述する}" -->
+	<!-- th:object="${インスタンス名} と記述し、formの中でentryFormインスタンスを受け取る" -->
+    <form th:action="@{customer/receiver-form}" th:object="${inputForm}" method="post">
+    	<!-- エラーがあったらエラー内容を表示 -->
+        <div th:errors="*{name}"></div>
+        <!-- th:field*{フィールド名} と記述し、受け取ったオブジェクトの指定したフィールドに紐づける -->
+        <input type="text" name="name" placeholder="名前" th:field="*{name}"><br>
+        <div th:errors="*{postCord}"></div>
+        <input type="text" name="postCord" placeholder="郵便番号" th:field="*{postCord}"><br>
+        <div th:errors="*{address}"></div>
+        <input type="text" name="address" placeholder="住所" th:field="*{address}"><br>
+        <div th:errors="*{pickUpAt}"></div>
+        <input type="date" name="pickUpAt" placeholder="集荷希望日時" th:field="*{pickUpAt}"><br>
+        <button type="submit">配送情報入力画面へ</button>
+    </form>
+</body>
+</html>
