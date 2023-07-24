@@ -15,6 +15,10 @@
         <div th:errors="*{senderName}"></div>
         <!-- th:field*{フィールド名} と記述し、受け取ったオブジェクトの指定したフィールドに紐づける -->
         <input type="text" name="senderName" placeholder="名前" th:field="*{senderName}"><br>
+        <div th:errors="*{senderKanaName}"></div>
+        <input type="text" name="senderKanaName" placeholder="フリガナ" th:field="*{senderKanaName}"><br>
+        <div th:errors="*{senderBirth}"></div>
+        <input type="date" name="senderBirth" placeholder="集荷希望日時" th:field="*{senderBirth}"><br>
         <div th:errors="*{senderPostCord}"></div>
         <input type="text" name="senderPostCord" placeholder="郵便番号" th:field="*{senderPostCord}"><br>
         <div th:errors="*{senderAddress}"></div>
@@ -25,6 +29,8 @@
         <div th:errors="*{receiverName}"></div>
         <input type="text" name="receiverName" placeholder="名前" th:field="*{receiverName}"><br>
         <div th:errors="*{receiverPostCord}"></div>
+        <div th:errors="*{receiverKanaName}"></div>
+        <input type="text" name="receiverKanaName" placeholder="フリガナ" th:field="*{receiverKanaName}"><br>
         <input type="text" name="receiverPostCord" placeholder="郵便番号" th:field="*{receiverPostCord}"><br>
         <div th:errors="*{receiverAddress}"></div>
         <input type="text" name="receiverAddress" placeholder="住所" th:field="*{receiverAddress}"><br>

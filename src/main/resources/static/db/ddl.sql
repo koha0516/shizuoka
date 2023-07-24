@@ -80,7 +80,7 @@ CREATE TABLE truck(
 SET sql_mode = ALLOW_INVALID_DATES; 
 
 CREATE TABLE delivery_info(
-    id                      varchar(16),
+    id                      int auto_increment,
     sender_name             varchar(32) NOT NULL,
     sender_kana_name        varchar(64) NOT NULL,
     sender_birth            date NOT NULL,
@@ -101,8 +101,8 @@ CREATE TABLE delivery_info(
 
 -- 配送状況
 CREATE TABLE delivery_status(
-    id                  varchar(8),
-    delivery_info_id    varchar(16) NOT NULL,
+    id                  int auto_increment,
+    delivery_info_id    int,
     date_and_time       timestamp NOT NULL,
     delivery_status     varchar(8) NOT NULL,
     branch_or_logi      varchar(8) NOT NULL,
