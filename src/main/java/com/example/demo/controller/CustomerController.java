@@ -25,26 +25,17 @@ public class CustomerController {
 	}
 	
 	/**
-	 * 配送先情報入力画面を表示するメソッド
+	 * 配送依頼情報の確認画面を表示するメソッド
 	 */
-	@GetMapping("/receiver-form")
-	public ModelAndView deliveryRequestReceiverForm(@Validated InputForm inputForm, BindingResult bindingResult, ModelAndView mav) {
-		System.out.println("helllo");
+	@PostMapping("/request-confirm")
+	public ModelAndView deliveryRequestConfirm(@Validated InputForm inputForm, BindingResult bindingResult, ModelAndView mav) {
 		if (bindingResult.hasErrors()) {
 			mav.setViewName("customer/sender-form");
 			return mav;
 		}
-		
-		mav.setViewName("customer/receiver-form");
-		return mav;
-	}
-	
-	/**
-	 * 配送依頼情報の確認画面を表示するメソッド
-	 */
-	@PostMapping("/request-confirm")
-	public ModelAndView deliveryRequestConfirm(ModelAndView mav) {
+		mav.addObject(inputForm);
 		mav.setViewName("customer/confirm");
+		
 		return mav;
 	}
 	

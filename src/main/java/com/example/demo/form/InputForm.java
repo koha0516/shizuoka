@@ -9,65 +9,55 @@ public class InputForm {
 //	↓バリデーションチェックの内容をアノテーションで記述
 	@NotBlank	//空白か
 	@Length(min = 1, max = 20)	//　文字列の長さ
-	private String name;
-	
-	@NotBlank	//空白か
-	@Length(min = 1, max = 30)	//　文字列の長さ
-	private String kanaName;
+	private String senderName;
 	
 	@NotNull
-	private String birth;
-	                        
-	@NotNull
-    private String postCord;
+    private String senderPostCord;
     
 	@NotNull
-    private String address;          
+    private String senderAddress;          
     
 	@NotNull
     private String pickUpAt;
 	
+	@NotBlank	//空白か
+	@Length(min = 1, max = 20)	//　文字列の長さ
+	private String receiverName;
+	
+	@NotNull
+    private String receiverPostCord;
+    
+	@NotNull
+    private String receiverAddress;
+	
+	@NotNull
+    private String arriveAt;
+	
 	@NotNull
 	private int quantity;
 
-	public String getName() {
-		return name;
+	public String getSenderName() {
+		return senderName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setSenderName(String senderName) {
+		this.senderName = senderName;
 	}
 
-	public String getKanaName() {
-		return kanaName;
+	public String getSenderPostCord() {
+		return senderPostCord;
 	}
 
-	public void setKanaName(String kanaName) {
-		this.kanaName = kanaName;
+	public void setSenderPostCord(String senderPostCord) {
+		this.senderPostCord = senderPostCord;
 	}
 
-	public String getBirth() {
-		return birth;
+	public String getSenderAddress() {
+		return senderAddress;
 	}
 
-	public void setBirth(String birth) {
-		this.birth = birth;
-	}
-
-	public String getPostCord() {
-		return postCord;
-	}
-
-	public void setPostCord(String postCord) {
-		this.postCord = postCord;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
+	public void setSenderAddress(String senderAddress) {
+		this.senderAddress = senderAddress;
 	}
 
 	public String getPickUpAt() {
@@ -78,6 +68,38 @@ public class InputForm {
 		this.pickUpAt = pickUpAt;
 	}
 
+	public String getReceiverName() {
+		return receiverName;
+	}
+
+	public void setReceiverName(String receiverName) {
+		this.receiverName = receiverName;
+	}
+
+	public String getReceiverPostCord() {
+		return receiverPostCord;
+	}
+
+	public void setReceiverPostCord(String receiverPostCord) {
+		this.receiverPostCord = receiverPostCord;
+	}
+
+	public String getReceiverAddress() {
+		return receiverAddress;
+	}
+
+	public void setReceiverAddress(String receiverAddress) {
+		this.receiverAddress = receiverAddress;
+	}
+
+	public String getArriveAt() {
+		return arriveAt;
+	}
+
+	public void setArriveAt(String arriveAt) {
+		this.arriveAt = arriveAt;
+	}
+
 	public int getQuantity() {
 		return quantity;
 	}
@@ -85,7 +107,6 @@ public class InputForm {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
 	
 }
 
